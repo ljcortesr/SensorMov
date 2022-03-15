@@ -16,4 +16,9 @@ public class DatoGps {
         longitud=lo;
         altitud=al;
     }
+    void actualizar2(double la, double lo, double al){
+        latitud=la;
+        longitud=lo;
+        altitud=al;
+    }
 }
