@@ -76,7 +76,7 @@ A futuro se contempla el uso del sensor de iluminación, de la pantalla táctil 
 
 Para instalar la biblioteca SensorMov, se deben seguir los pasos indicados a continuación: 
 
-1. Descargar el archivo sensormov-release de la dirección (http://https://drive.google.com/file/d/1PZAZRbi3HIECWTlmwgaefcNieD94jaov/view?usp= sharing )
+1. Descargar el archivo sensormov-release de la dirección https://drive.google.com/file/d/1eBnQN-mB0T-rEoHoq19JorX7SryHlkBS/view?usp=sharing 
 
 2. En File, seleccionar la opción Project Structure…
 
