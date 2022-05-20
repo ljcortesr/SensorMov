@@ -76,17 +76,17 @@ A futuro se contempla el uso del sensor de iluminación, de la pantalla táctil 
 
 Para instalar la biblioteca SensorMov, se deben seguir los pasos indicados a continuación: 
 
-1. Descargar el archivo sensormov-release de la dirección [http://https://drive.google.com/file/d/1PZAZRbi3HIECWTlmwgaefcNieD94jaov/view?usp= sharing ](http://https://drive.google.com/file/d/1PZAZRbi3HIECWTlmwgaefcNieD94jaov/view?usp= sharing )
+1. Descargar el archivo sensormov-release de la dirección (http://https://drive.google.com/file/d/1PZAZRbi3HIECWTlmwgaefcNieD94jaov/view?usp= sharing )
 
-2. En file, seleccionar la opción proyect structure…
+2. En File, seleccionar la opción Project Structure…
 
-3. Posteriormente, se desplegará una nueva ventana cuyo menú a la izquierda contará con una opción llamada dependencias, la cual debe ser seleccionada.
+3. Posteriormente, se desplegará una nueva ventana cuyo menú a la izquierda contará con una opción llamada Dependencies; seleccionarla.
 
-4. En la barra superior aparecerá un símbolo más (+), el cual desplegará dos opciones, de las cuales la segunda debe ser elegida.
+4. En la barra superior aparecerá un símbolo más (+), el cual desplegará dos opciones, seleccionar "JAR/AAR Dependecy".
 
-5. A continuación, hará acto de presencia una nueva ventana que pide la ubicación donde se encuentra alojada la biblioteca, para dar dicha información solo basta con copiar y pegar el lugar donde se encuentra y seleccionar la opción ok.
+5. A continuación, se despliega una nueva ventana que pide la ubicación donde se encuentra alojada la biblioteca;  solo se debe copiar la ruta de la carpeta donde está el archivo de la bibliteca descargado, sin inckuir el nombre del archivo.
 
-6. Una vez aparece la librería, se selecciona, se da click en la opción applay y luego en ok.
+6. Una vez aparece la carpeta en la lista de dependencias, se selecciona, se da clic en la opción Apply y luego en Ok.
 
 7. Listo, lo siguiente es escribir la siguiente línea de código: 
 *import com.umng.sensormov. *
@@ -257,11 +257,9 @@ public class MainActivity extends SensorDatos implements SensorEventListener {
 
 #### 5.2.5 GPS
 
-Este ejemplo despliega en un campo de texto el valor de latitud brindada por el GPS. Nota: *Recuerde revisar si la aplicación creada si tiene los permisos necesarios para acceder a la ubicación del dispositivo.*
+Este ejemplo despliega en un campo de texto con el valor de latitud, longitud y altitud brindada por el GPS. Nota: *Recuerde revisar que la aplicación creada tenga los permisos necesarios para acceder a la ubicación del dispositivo.*
 
 ```java
-package com.example.datos_pantallagps;
-
 import android.content.Context;
 import android.location.LocationManager;
 import android.os.Build;
@@ -278,10 +276,9 @@ public class MainActivity extends GPS {
         super.onCreate(savedInstanceState);
         LocationManager lm=(LocationManager)getSystemService(Context.LOCATION_SERVICE);
         setContentView(R.layout.activity_main);
-        gps = findViewById(R.id.testGPS);
-        String mes = "";
-        mes = "Latitud: " + dgps.latitud;
-        gps.setText(mes);
+        gps = findViewById(R.id.testLatitud);
+        String gpsPos = "Latitud: " + dgps.latitud + "\n Longitud: " + dgps.longitud +"\n Altitud: " + dgps.altitud;
+        gps.setText(gpsPos);
     }
 }
 
